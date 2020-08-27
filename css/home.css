@@ -1,0 +1,180 @@
+
+#slider {
+	overflow: hidden;
+}
+#slider figure {
+	position: relative;
+	width: 100%;
+	margin: 0;
+	left: 0;
+	animation: 20s slider infinite;
+}
+#slider figure img {
+	width: 100%;
+	float: left;
+}
+
+#nav img{
+	width: 30px;
+	padding: 5px;
+	cursor: pointer;
+}
+#nav h5 {
+	margin-bottom: 0;
+	margin-right: 10px;
+}
+
+#nav ul li {
+	float: left;
+}
+
+#nav svg {
+	margin-right: 10px;
+}
+
+#nav a {
+	color: black;
+}
+
+
+.carousel-item {
+	margin: 0;
+	height: 70vh;
+	min-height: 300px;
+	background: no-repeat center center scroll;
+	background-size: cover;
+}
+
+.carousel-caption {
+	bottom: 270px;
+}
+
+.carousel-caption h5 {
+	font-size: 45px;
+	margin-top: 5px;
+
+}
+
+.carousel-caption p {
+	width: 75%;
+	font-size: 18px;
+	margin: auto;
+}
+
+.row {
+	margin: 40px 0;
+}
+
+.column {
+	width: 25%;
+	display: table;
+	padding: 10px;
+	text-align: center;
+}
+
+/*  Footer	*/
+
+.container {
+	width: 80%;
+	margin: 0px auto;
+}
+
+.wrap {
+	display: table;
+	box-sizing: border-box;
+}
+
+footer {
+	background-color: #282828;
+	color: #aba8a8;
+	height: 50vh;
+
+}
+
+.footer-widget {
+	margin: 0 10px;
+	text-align: justify;
+}
+
+.footer-widget ul {
+	margin-left: 10px;
+}
+
+.footer-widget ul li {
+	padding-bottom: 15px;
+}
+
+.footer-widget ul li a {
+	color: #aba8a8;
+	text-decoration: none;
+}
+
+.footer-widget ul li a {
+	color: #aba8a8;
+	text-decoration: none;
+}
+
+.footer-widget ul li a:hover {
+	color: #d2d2d2;
+	margin-left: 10px;
+
+}
+
+.category-widget, .information-widget {
+	margin-left: 50px;
+}
+
+.widget-title {
+	color: #fff;
+	margin-bottom: 30px;
+	text-transform: capitalize;
+	font-size: 30px;
+}
+
+.about-widget p {
+	line-height: 20px;
+	margin: 10px 0 30px 0;
+}
+.about-widget p span {
+	margin-right: 10px;
+}
+
+.cards i {
+	display: inline-block;
+	margin-right: 12px;
+	font-size: 30px;
+}
+
+.contact-address {
+	padding-bottom: 20px;
+}
+
+.contact-number, .contact-email {
+	margin: 10px 0;
+}
+
+.social-widget a {
+	display: inline-block;
+	font-size: 28px;
+	color: #aba8a8;
+	margin-right: 10px;
+}
+
+.social-widget a:hover {
+	color: #d2d2d2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
