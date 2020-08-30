@@ -19,7 +19,7 @@ function add(id){
             if (data['status'] == "200")
                 window.location.href = `product.html?id=${category_id}&user_id=${user_id}`
             else{
-                alert('Fail to add product, Error occured')
+                alert('Out of stock')
                 window.location.href = `product.html?id=${category_id}&user_id=${user_id}`
             }
         })

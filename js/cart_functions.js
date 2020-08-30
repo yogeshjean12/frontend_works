@@ -52,7 +52,8 @@ function update(id, c){
                 
                 window.location.href = "cart.html?user_id=" + user_id
             else{
-                alert('Out of stock.')
+                setTimeout(alert('Out of stock.'), 3000);
+                
                 window.location.href = "cart.html?user_id=" + user_id
             }
         })

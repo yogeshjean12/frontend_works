@@ -17,7 +17,7 @@ function slider(){
     }
     slideimg.src = images[i];
     i++;
-    setTimeout("slider()", 600000);
+    setTimeout("slider()", 15000);
 }
 
 
@@ -46,7 +46,7 @@ function home(){
     var name = document.getElementById('Username').value; 
     var password = document.getElementById('Password').value; 
     var dataToSend = JSON.stringify({"username": name, "password": password});
-    
+
     var detail = fetch("http://127.0.0.1:5000/login",{
         method:'POST',
         headers: {
@@ -69,39 +69,43 @@ function home(){
 } 
 
 
-var check = function() {
-    if (document.getElementById('password').value ==
-      document.getElementById('confirm_password').value) {
-      document.getElementById('message').style.color = 'green';
-      document.getElementById('message').innerHTML = 'matching';
-      console.log('match')
-    } else {
-      document.getElementById('message').style.color = 'red';
-      document.getElementById('message').innerHTML = 'not matching';
-      console.log('not match')
-    }
-  }
 
 
-  function checkPass(){
-    var pass  = document.getElementById("password").value;
-    var rpass  = document.getElementById("rpassword").value;
-   if(pass != rpass){
-       document.getElementById("submit").disabled = true;
-       $('.missmatch').html("Entered Password is not matching!! Try Again");
-   }else{
-       $('.missmatch').html("");
-       document.getElementById("submit").disabled = false;
-   }
-}
+
+const pass  = document.getElementById("Password1").value;
+const rpass  = document.getElementById("confirm_password").value;
+const form = document.getElementById('form')
+const errorElement = document.getElementById('error')
+
+form.addEventListener('submit', (e) => {
+    let message = []
+    console.log('in')
+    if (pass.value === '' | pass.value == null)
+    console.log('in IN')
+    message.push('password required')
+
+    if (rpass.value === '' | rpass.value == null)
+    message.push('confirm password required')
+
+    if (rpass.value === pass.value)
+    message.push('password not matched')
+
+
+
+
+    e.preventDefault()
+    errorElement.innerText = message.join(', ')
+
+})
 
 
 
 function register(){
     var name = document.getElementById('Username1').value; 
     var password = document.getElementById('Password1').value; 
-    var dataToSend = JSON.stringify({"username": name, "password": password});
-    
+    var confirm_password = document.getElementById('confirm_password').value;
+    var dataToSend = JSON.stringify({"username": name, "password": password, "confirm_password": confirm_password});
+    console.log(dataToSend)
     var detail = fetch("http://127.0.0.1:5000/register",{
         method:'POST',
         headers: {
@@ -116,7 +120,7 @@ function register(){
             if (data['status'] == "200")
                 window.location.href = 'welcome.html'
             else{
-                alert('Username already exist, try somthing different.')
+                alert('Invalid entry!')
                 window.location.href = 'welcome.html'
                 
             }
